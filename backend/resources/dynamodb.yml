@@ -1,5 +1,5 @@
 Resources:
-    Tables:
+    Table:
         Type: AWS::DynamoDB::Table
         Properties: 
           TableName: ${self:service.name}-dynamodb
@@ -9,15 +9,6 @@ Resources:
               AttributeType: S
             - 
               AttributeName: uuid
-              AttributeType: S
-              
-            - AttributeName: année de sortie
-              AttributeType: S
-            - 
-              AttributeName: catégorie de film
-              AttributeType: S
-            - 
-              AttributeName: note moyenne
               AttributeType: S
           KeySchema: 
             - 

@@ -1,4 +1,3 @@
-
 service: cs-group-${self:custom.stageVars.groupNumber}-${self:custom.stageVars.myFirstname}
 
 provider:

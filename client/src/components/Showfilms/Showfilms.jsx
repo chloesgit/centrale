@@ -22,7 +22,7 @@ export default class Showfilms extends Component {
             })
           })
     } else {
-      Api.getMovies(props.category)
+      Api.getMovies2(props.category)
           .then(data => {
             this.setState({
               results: data.results

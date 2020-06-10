@@ -7,16 +7,16 @@ bd = {}
 
 
 
-for i in range (600,602):
+for i in range (20,2020):
     try: 
         Film=tmdb.Movies(i).info()
         dicoPut={}
         dicoItem={}
         dicoItem['type']={"S":"Movie"}
-        dicoItem['uuid']={"N":str(i)}
+        dicoItem['uuid']={"S":str(i)}
         dicoItem['name']={"S":Film['original_title']}
         dicoItem['date de sortie']={"S":Film['release_date']}
-        dicoItem['note']={"N":str(Film['vote_average'])}
+        dicoItem['note']={"S":str(Film['vote_average'])}
         dicoItem['résumé']={"S":Film['overview']}
         L=Film['genres']
         genre = []
@@ -30,7 +30,6 @@ for i in range (600,602):
         continue
 bd[
     "cs-group-2-chloes-dynamodb"]=élément
-print(bd)
 
 with open('database.json','w') as data:
     data.write(json.dumps(bd, indent=4))

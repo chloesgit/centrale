@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { Input, Col, Row, Button } from 'antd'
 import { Redirect } from 'react-router-dom'
 import './SearchForm.css'
+import Api from '../../Services/dataService'
+import  {FileSearchOutlined } from   '@ant-design/icons'
 
 export default class SearchForm extends Component {
   constructor (props) {
@@ -19,6 +21,7 @@ export default class SearchForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
+    Api.getFilmList()
     this.setState({ fireRedirect: true })
   }
 
@@ -29,7 +32,9 @@ export default class SearchForm extends Component {
         <Col span={14} offset={5}>
           <form onSubmit={this.handleSubmit}>
             <Input className='input' placeholder='Search a film...' onChange={this.handleChange} />
-            <Button type="primary" icon="search" onClick={this.handleSubmit}>Search</Button>
+            <Button type="primary" onClick={this.handleSubmit}>
+              <FileSearchOutlined/>
+              Search</Button>
           </form>
         </Col>
         {

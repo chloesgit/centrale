@@ -21,7 +21,7 @@ module.exports.handle = async event => {
                 'Access-Control-Allow-Credentials': 'true',
               },
             statusCode: 200,
-            body: JSON.stringify(result.Item),
+              body: JSON.stringify({results : result}),
         }
     } else {
         return {

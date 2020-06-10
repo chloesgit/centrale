@@ -1,4 +1,3 @@
-
 const DynamoDB = require('aws-sdk/clients/dynamodb');
 const uuid = require('uuid');
 
@@ -12,7 +11,7 @@ module.exports.handle = async event => {
     const item = {
         type: 'items',
         uuid: uuid.v1(),
-        content: data.name,
+        title: data.name,
         description: data.descript,
         createdAt: Date.now(),
     }
@@ -43,5 +42,3 @@ module.exports.handle = async event => {
     }
     
 }
-
-

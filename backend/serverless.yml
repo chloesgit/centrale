@@ -13,6 +13,7 @@ provider:
         - dynamodb:PutItem
       Resource:
         - 'Fn::GetAtt': [Table, Arn]
+        - "*"
   environment:
     tableName: ${self:service.name}-dynamodb
 
@@ -23,7 +24,9 @@ functions:
       - http:
           path: hello
           method: get
-
+        cors:
+            origin: http://localhost:3000
+            allowCredentials: true
   get:
     handler: functions/get.handle
     events:

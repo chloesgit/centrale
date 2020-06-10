@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import CardTemplate from '../CardTemplate/CardTemplate'
 import Api from '../../Services/dataService.js'
 import { Row, Col } from 'antd'
-import uuidv4 from 'uuid/v4'
+import { v4 as uuidv4 } from 'uuid';
 import './Showfilms.css'
 
 export default class Showfilms extends Component {

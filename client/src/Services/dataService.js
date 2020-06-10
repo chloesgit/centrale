@@ -2,7 +2,7 @@
 import axios from 'axios'
 
 const apiKey = '8d181bcb5e80a929053da01f6921e4a9';
-const serverBaseUrl = " https://4xf468tqca.execute-api.eu-west-1.amazonaws.com/"
+const serverBaseUrl = " https://cwc0sbvgf4.execute-api.eu-west-1.amazonaws.com/"
 export default {
   getMovies: (category) => {
     const url = `https://api.themoviedb.org/3/movie/${category}?api_key=${apiKey}&language=en-US&page=1`

@@ -48,7 +48,30 @@ export default class CreateFilm extends Component {
     
     
   </Form.Group>
-
+  <Form.Group controlId="type" value={this.state.value} onChange={this.handleChange}>
+    <Form.Label>Name  </Form.Label>
+    <Form.Control as="textarea" rows="1" />
+    
+    
+  </Form.Group><Form.Group controlId="date" value={this.state.value} onChange={this.handleChange}>
+    <Form.Label>Name  </Form.Label>
+    <Form.Control as="textarea" rows="1" />
+    
+    
+  </Form.Group><Form.Group controlId="note" value={this.state.value} onChange={this.handleChange}>
+    <Form.Label>Name  </Form.Label>
+    <Form.Control as="textarea" rows="1" />
+    
+    
+ 
+    
+    
+  </Form.Group><Form.Group controlId="genres" value={this.state.value} onChange={this.handleChange}>
+    <Form.Label>Name  </Form.Label>
+    <Form.Control as="textarea" rows="1" />
+    
+    
+  </Form.Group>
   <Form.Group controlId="Description" value ={this.state.valueDes}  onChange={this.handleChange2}>
     <Form.Label>Description</Form.Label>
     

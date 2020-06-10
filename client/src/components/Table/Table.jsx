@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Table, Col, Row } from 'antd'
-import uuidv4 from 'uuid/v4'
+import { v4 as uuidv4 } from 'uuid';
 import Api from '../../Services/dataService'
 import Utils from '../../Services/utilsService'
 

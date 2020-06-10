@@ -1,5 +1,5 @@
 /* @flow */
-import React, { Component } from 'react'
+import React from 'react'
 import { Row, Col, Rate, Tag } from 'antd'
 import YouTube from 'react-youtube'
 
@@ -8,19 +8,10 @@ import Api from '../../Services/dataService'
 
 import './Movie.css'
 
-type State = {
-  name: number,
-  description: string,
-  urlImage: string,
-  stars: number,
-  genres: <Array>,
-  release_date: string,
-  videoId: number
-}
 
-export default class Movie extends Component <State> {
+export default class Movie extends React.Component{
   constructor (props) {
-    super(prosp)
+    super(props)
 
     this.state = {
       name: '',

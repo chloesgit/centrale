@@ -60,6 +60,9 @@ export default class CreateFilm extends Component {
   <Button variant="primary" type="submit" onClick={ this.handleSend}>>
     Submit
   </Button>
+  <Form.Group>
+    <Form.File id="picture" label="upload a picture" />
+  </Form.Group>
 </Form>
     )
   }

@@ -1,13 +1,13 @@
 import tmdbsimple as tmdb
 import json
 tmdb.API_KEY = 'dea6272d1535762c973d2abb890d6f65'
-
+print(tmdb.Movies(333).info())
 bd = {}
 élément=[]
 
 
 
-for i in range (20,2020):
+for i in range (20,22):
     try: 
         Film=tmdb.Movies(i).info()
         dicoPut={}
@@ -24,6 +24,7 @@ for i in range (20,2020):
             genre.append(L[i]['name'])
         dicoItem['genres']={"SS": genre}
         dicoItem['adult']={"S":str(Film['adult'])}
+        dicoItem['poster_path']={"S":Film['poster_path']}
         dicoPut["PutRequest"]={"Item":dicoItem}
         élément.append(dicoPut)
     except : 

@@ -7,7 +7,7 @@ bd = {}
 
 
 
-for i in range (0,2000):
+for i in range (600,602):
     try: 
         Film=tmdb.Movies(i).info()
         dicoPut={}
@@ -24,14 +24,14 @@ for i in range (0,2000):
             genre.append(L[i]['name'])
         dicoItem['genres']={"L": genre}
         dicoItem['adult']={"S":Film['adult']}
-        dicoPut["PutRequest"]=dicoItem
+        dicoPut["PutRequest"]={"Item":dicoItem}
         élément.append(dicoPut)
     except : 
         continue
 bd[
-    "cs-group-2-chloes"]=élément
+    "cs-group-2-chloes-dynamodb"]=élément
 print(bd)
 
 with open('database.json','w') as data:
-    data.write(json.dump(bd, data,indent=4))
+    data.write(json.dumps(bd, indent=4))
 

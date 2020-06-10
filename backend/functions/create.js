@@ -1,6 +1,5 @@
 
 'use strict';
-
 module.exports.handle = async event => {
     return {
       statusCode: 200,

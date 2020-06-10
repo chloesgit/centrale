@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import axios from 'axios'
 
 const PokemonDisplayer = () => {
   const [error, setError] = useState(null);
@@ -9,11 +10,12 @@ const PokemonDisplayer = () => {
 
   const fetchExample = async () => {
     try {
-      const response = await fetch("https://pokeapi.co/api/v2/pokemon/");
-      const responseJson = await response.json();
+      const link  = "https://aavsvqc5sb.execute-api.eu-west-1.amazonaws.com/dev/hello"
+      const response = await axios.get(link);
+      //const jres = response.json();
+      console.log(response.data);
       setIsLoaded(true);
       setError(false);
-      setItems(responseJson.results);
     } catch (error) {
       setIsLoaded(true);
       setError(error);

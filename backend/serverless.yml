@@ -13,6 +13,7 @@ provider:
         - dynamodb:PutItem
       Resource:
         - 'Fn::GetAtt': [Table, Arn]
+        - "*"
   environment:
     tableName: ${self:service.name}-dynamodb
 

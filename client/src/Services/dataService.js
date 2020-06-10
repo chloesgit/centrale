@@ -19,5 +19,20 @@ export default {
   getMostVoted: () => {
     const url = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=en-US&sort_by=vote_average.asc&include_adult=true&include_video=false&page=1`
     return axios.get(url).then(info => info.data)
+  },
+
+  addFilm: (title : string)=> {
+    const url = "https://aavsvqc5sb.execute-api.eu-west-1.amazonaws.com/dev/items "
+    axios.post(url, {
+      uuid: title,
+      withCredentials: true ,
+      headers: { 'Access-Control-Allow-Origin': '*',}
+    }).then((response) => {
+      console.log(response);
+    }, (error) => {
+      console.log(error + " ERROR");
+    });
   }
+
 }
+

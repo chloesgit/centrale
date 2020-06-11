@@ -2,13 +2,9 @@ import React, { Component } from 'react'
 import { Input, Col, Row } from 'antd'
 import { Redirect } from 'react-router-dom'
 import './SearchForm.css'
-<<<<<<< HEAD
 import Button from 'react-bootstrap/Button'
-=======
 import Api from '../../Services/dataService'
 import  {FileSearchOutlined } from   '@ant-design/icons'
->>>>>>> 4801d387eea80de57c5f11c7a213735ad485eefa
-
 export default class SearchForm extends Component {
   constructor (props) {
     super(props)

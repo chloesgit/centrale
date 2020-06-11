@@ -2,7 +2,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Card } from 'antd'
-<<<<<<< HEAD
 import "./CardTemplate.css";
 type Props = {
   name: number,
@@ -11,9 +10,6 @@ type Props = {
   image: number, 
   id: number
 }
-=======
-
->>>>>>> 4801d387eea80de57c5f11c7a213735ad485eefa
 
 
 const CardTamplate = ({ name, date, vote, image, uuid }: Props) => (

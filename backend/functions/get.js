@@ -6,7 +6,7 @@ module.exports.handle = async event => {
     }
 
     const dynamoDb = new DynamoDB.DocumentClient();
-    const result = await dynamoDb.get({
+    const result = await dynamoDb.delete({
         TableName: process.env.tableName,
         Key: {
             type: 'items',

@@ -30,7 +30,7 @@ export default class SearchForm extends Component {
         <Col span={14} offset={5}>
           <form onSubmit={this.handleSubmit}>
             <Input className='input' style={{borderColor: "#90b5bb" }}placeholder='Rechercher un film' onChange={this.handleChange} />
-            <Button style={{backgroundColor:"#036f7b",color:"white"}}variant="Search">Search</Button>{' '}
+            <Button style={{backgroundColor:"#036f7b",color:"white"}}variant="Search" onClick={this.handleSubmit}>Search</Button>{' '}
           </form>
         </Col>
         {

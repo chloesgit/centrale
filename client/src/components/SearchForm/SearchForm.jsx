@@ -32,15 +32,8 @@ export default class SearchForm extends Component {
       <Row>
         <Col span={14} offset={5}>
           <form onSubmit={this.handleSubmit}>
-<<<<<<< HEAD
             <Input className='input' style={{borderColor: "#90b5bb" }}placeholder='Rechercher un film' onChange={this.handleChange} />
-            <Button style={{backgroundColor:"#036f7b",color:"white"}}variant="Search" onClick={this.handleSubmit}>Search</Button>{' '}
-=======
-            <Input className='input' placeholder='Search a film...' onChange={this.handleChange} />
-            <Button type="primary" onClick={this.handleSubmit}>
-              <FileSearchOutlined/>
-              Search</Button>
->>>>>>> seif3
+            <Button style={{backgroundColor:"#036f7b",color:"white"}}variant="Search" onClick={this.handleSubmit}><FileSearchOutlined/>Search</Button>{' '}
           </form>
         </Col>
         {

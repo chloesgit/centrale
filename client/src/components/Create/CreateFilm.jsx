@@ -5,6 +5,7 @@ import Api from '../../Services/dataService'
 import Form from 'react-bootstrap/Form'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MultiSelect from "react-multi-select-component";
+import './CreateFilm.css';
 
  
 var Genre = '';

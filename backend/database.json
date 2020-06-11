@@ -1,46 +1,10 @@
-{"cs-group-2-wassimFinal-dynamodb":
-    
-[{"PutRequest":
-    {"Item":
-        {"type": {"S": "Movie"}, 
-        "uuid": {"S": "2"}, 
-        "name": {"S": "Ariel"},
-        "date de sortie": {"S": "1988-10-21"},
-        "note": {"S": "6.8"},
-        "résumé": {"S": "Taisto Kasurinen is a Finnish coal miner whose father has just committed suicide and who is framed for a crime he did not commit. In jail, he starts to dream about leaving the country and starting a new life. He escapes from prison but things dont go as   planned..."}, 
-            "genres": {"SS": ["Drama" ,"Crime" ,"Comedy"]},
-            "adult": {"S": "False"}}}}, 
-
- {"PutRequest":
-    {"Item":
-     {"type": {"S": "Movie"}, 
-     "uuid": {"S": "3"}, 
-     "name": {"S": "Varjoja paratiisissa"},
-    "date de sortie": {"S": "1986-10-17"}, 
-    "note": {"S": "7.4"},
-    "résumé": {"S": "An episode in the life of Nikander, a garbage man, involving the death of a co-worker, an affair and much more."},
-     "genres": {"SS": ["Drama", "Comedy"]},
-      "adult": {"S": "False"}}}},
-
-{"PutRequest":
-    {"Item":
-     {"type": {"S": "Movie"}, "uuid": {"S": "5"}, "name": {"S": "Four Rooms"}, "date de sortie": {"S": "1995-12-09"}, "note": {"S": "5.9"}, "résumé": {"S": "Its Ted the Bellhops first night on the job...and the hotels very unusual guests are about to place him in some outrageous predicaments. It seems that this evenings room service is serving up one unbelievable happening after another."}, "genres": {"SS": ["Crime", "Comedy"]}, "adult": {"S": "False"}}}},
-
-{"PutRequest":
-    {"Item":
-     {"type": {"S": "Movie"}, "uuid": {"S": "6"}, "name": {"S": "Judgment Night"}, "date de sortie": {"S": "1993-10-15"}, "note": {"S": "6.4"}, "résumé": {"S": "While racing to a boxing match, Frank, Mike, John and Rey get more than they bargained for. A wrong turn lands them directly in the path of Fallon, a vicious, wise-cracking drug lord. After accidentally witnessing Fallon murder a disloyal henchman, the four become his unwilling prey in a savage game of cat & mouse as they are mercilessly stalked through the urban jungle in this taut suspense drama"},
-     "genres": {"SS": ["Action", "Thriller", "Crime"]}, "adult": {"S": "False"}}}},
-
-{"PutRequest":
-    {"Item":
-    {"type": {"S": "Movie"}, "uuid": {"S": "8"}, "name": {"S": "Life in Loops (A Megacities RMX)"}, "date de sortie": {"S": "2006-01-01"}, "note": {"S": "7.5"}, "résumé": {"S": "Timo Novotny labels his new project an experimental music documentary film, in a remix of the celebrated film Megacities (1997), a visually refined essay on the hidden faces of several world megacities by leading Austrian documentarist Michael Glawogger. Novotny complements 30 % of material taken straight from the film (and re-edited) with 70 % as yet unseen footage in which he blends original shots unused by Glawogger with his own sequences (shot by Megacities cameraman Wolfgang Thaler) from Tokyo. Alongside the Japanese metropolis, Life in Loops takes us right into the atmosphere of Mexico City, New York, Moscow and Bombay. This electrifying combination of fascinating film images and an equally compelling soundtrack from Sofa Surfers sets us off on a stunning audiovisual adventure across the continents. The film also makes an original contribution to the discussion on new trends in documentary filmmaking. Written by KARLOVY VARY IFF 2006"},
-     "genres": {"SS": ["Documentary"]}, "adult": {"S": "False"}}}},
-
-
-{"PutRequest":
-    {"Item":
-         {"type": {"S": "Movie"}, "uuid": {"S": "9"}, "name": {"S": "Sonntag im August"}, "date de sortie": {"S": "2004-09-02"}, "note": {"S": "6.7"}, "résumé": {"S": ""}, "genres": {"SS": ["Drama"]}, "adult": {"S": "False"}}}}]}
-
-
-
-       
+{"cs-group-2-WassimM-dynamodb": [{"PutRequest": {"Item": {"type": {"S": "Movie"}, "uuid": {"S": "2"}, 
+    "name": {"S": "Ariel"}, "release_date": {"S": "1988-10-21"}, "vote_average": {"S": "6.8"},
+     "overview": {"S": "Taisto Kasurinen is a Finnish coal miner whose father has just committed suicide and who is framed for a crime he did not commit. In jail, he starts to dream about leaving the country and starting a new life. He escapes from prison but things dont go as planned..."}, "genres": {"SS": ["Drama", "Crime", "Comedy"]}, "adult": {"S": "False"}}}}, {"PutRequest": {"Item": {"type": {"S": "Movie"}, "uuid": {"S": "3"}, "name": {"S": "Varjoja paratiisissa"}, "release_date": {"S": "1986-10-17"}, 
+        "vote_average": {"S": "7.4"}, "overview": {"S": "An episode in the life of Nikander, a garbage man, involving the death of a co-worker, an affair and much more."}, "genres": {"SS": ["Drama", "Comedy"]}, "adult": {"S": "False"}}}}, {"PutRequest": {"Item": {"type": {"S": "Movie"}, "uuid": {"S": "5"}, 
+    "name": {"S": "Four Rooms"}, "release_date": {"S": "1995-12-09"}, "vote_average": {"S": "5.9"}, 
+    "overview": {"S": "Its Ted the Bellhops first night on the job...and the hotels very unusual guests are about to place him in some outrageous predicaments. It seems that this evenings room service is serving up one unbelievable happening after another."}, "genres": {"SS": ["Crime", "Comedy"]}, "adult": {"S": "False"}}}},
+         {"PutRequest": {"Item": {"type": {"S": "Movie"}, "uuid": {"S": "6"}, "name": {"S": "Judgment Night"}, "release_date": {"S": "1993-10-15"}, "vote_average": {"S": "6.4"}, 
+         "overview": {"S": "While racing to a boxing match, Frank, Mike, John and Rey get more than they bargained for. A wrong turn lands them directly in the path of Fallon, a vicious, wise-cracking drug lord. After accidentally witnessing Fallon murder a disloyal henchman, the four become his unwilling prey in a savage game of cat & mouse as they are mercilessly stalked through the urban jungle in this taut suspense drama"},
+          "genres": {"SS": ["Action", "Thriller", "Crime"]}, "adult": {"S": "False"}}}}, {"PutRequest": {"Item": {"type": {"S": "Movie"}, "uuid": {"S": "8"}, "name": {"S": "Life in Loops (A Megacities RMX)"}, "release_date": {"S": "2006-01-01"}, "vote_average": {"S": "7.5"}, "overview": {"S": "Timo Novotny labels his new project an experimental music documentary film, in a remix of the celebrated film Megacities (1997), a visually refined essay on the hidden faces of several world megacities by leading Austrian documentarist Michael Glawogger. Novotny complements 30 % of material taken straight from the film (and re-edited) with 70 % as yet unseen footage in which he blends original shots unused by Glawogger with his own sequences (shot by Megacities cameraman Wolfgang Thaler) from Tokyo. Alongside the Japanese metropolis, Life in Loops takes us  right into the atmosphere of Mexico City, New York, Moscow and Bombay. This electrifying combination of fascinating film images and an equally compelling soundtrack from Sofa Surfers sets us off on a stunning audiovisual adventure across the continents. The film also makes an original contribution to the discussion on new trends in documentary filmmaking. Written by KARLOVY VARY IFF 2006"}, "genres": {"SS": ["Documentary"]}, 
+    "adult": {"S": "False"}}}}, {"PutRequest": {"Item": {"type": {"S": "Movie"}, "uuid": {"S": "9"}, "name": {"S": "Sonntag im August"}, "release_date": {"S": "2004-09-02"}, "vote_average": {"S": "6.7"}, "overview": {"S": ""}, "genres": {"SS": ["Drama"]}, "adult": {"S": "False"}}}}]} 

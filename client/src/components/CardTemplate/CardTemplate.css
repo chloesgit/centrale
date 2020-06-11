@@ -1,9 +1,25 @@
-.custom-image img {
-  display: block;
+@font-face {
+  font-family: 'BebasNeue-Regular';
+  src: url('BebasNeue-Regular.eot');
+  src: url('BebasNeue-Regular.otf') format('truetype'),
+       url('BebasNeue-Regular.woff') format('woff'),
+       url('BebasNeue-Regular.woff2') format('woff2'),
+       url('BebasNeue-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+  }
+
+h3{
+  padding: 10px 16px; text-align: center ; font-family: BebasNeue-Regular; font-size: 30px; font-weight: bold; color: #036f7b ;line-height: 2
 }
-.custom-card {
-  padding: 10px 16px;
+p{
+  padding: 10px 16px; text-align: center ; font-family: BebasNeue-Regular; font-size: 20 px; color: black ; line-height: 2;
 }
-.custom-card p {
+img { border: 20px ;
+  padding: 15px;
   color: #999;
+}
+/* mouse over link */
+link:hover {
+  color:#90b5bb;
 }

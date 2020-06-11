@@ -44,18 +44,15 @@ export default class Movie extends React.Component{
   render () {
     return (
       <Row>
-        <Col span={8} offset={1}>
-          <img alt={this.state.name} width='85%' src={`https://image.tmdb.org/t/p/w500${this.state.urlImage}`} />
-        </Col>
         <Col span={12} offset={1}>
           <h1>{this.state.name}</h1>
           <hr />
           <strong> Description: </strong>
           <p>{this.state.description}</p>
           <hr />
-          <div className='genere'>
+          <div className='Genre'>
             <span className='genereTitle'>
-              <strong>Generes: </strong>
+              <strong>Genres: </strong>
             </span>
             {this.state.genres.map(genere => <Tag color={Utils.randomColor()} key={genere.id}>{genere.name}</Tag>)}
           </div>
@@ -65,7 +62,11 @@ export default class Movie extends React.Component{
             <strong> Trailer: </strong>
           </div>
           <YouTube videoId={this.state.videoId} />
+        </Col>        
+        <Col span={10} offset={1}>
+          <img alt={this.state.name} width='85%' src={`https://image.tmdb.org/t/p/w500${this.state.urlImage}`} />
         </Col>
+
       </Row>
     )
   }

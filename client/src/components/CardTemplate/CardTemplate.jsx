@@ -2,7 +2,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Card } from 'antd'
-
+import "./CardTemplate.css";
 type Props = {
   name: number,
   date: string, 
@@ -19,7 +19,7 @@ const CardTamplate = ({ name, date, vote, image, id }: Props) => (
       </div>
       <div className='custom-card'>
         <h3>{name}</h3>
-        <p>{`Date: ${date} || Votes: ${vote}`}</p>
+        <p>{`Date: ${date}`}<br/>{` Note: ${vote}`}</p>
       </div>
     </Card>
   </Link>

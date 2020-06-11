@@ -8,11 +8,11 @@ type Props = {
   date: string, 
   vote: number,
   image: number, 
-  id: number
+  uuid: number
 }
 
-const CardTamplate = ({ name, date, vote, image, id }: Props) => (
-  <Link to={`/movie/${id}`}>
+const CardTamplate = ({ name, date, vote, image, uuid }: Props) => (
+  <Link to={`/movie/${uuid}`}>
     <Card style={{ width: 240 }} bodyStyle={{ padding: 0 }}>
       <div className='custom-image'>
         <img alt={name} width='100%' src={`https://image.tmdb.org/t/p/w500${image}`} />

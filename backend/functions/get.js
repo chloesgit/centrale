@@ -1,6 +1,8 @@
 const DynamoDB = require('aws-sdk/clients/dynamodb');
 
 module.exports.handle = async event => {
+    try
+    {
     if (!process.env.tableName) {
         throw new Error('env.tableName must be defined');
     }
@@ -21,9 +23,10 @@ module.exports.handle = async event => {
                 'Access-Control-Allow-Credentials': 'true',
               },
             statusCode: 200,
-              body: JSON.stringify({results : result}),
+              body: JSON.stringify(result.Item),
         }
-    } else {
+    }
+    else {
         return {
             headers: {
                 'Access-Control-Allow-Origin': 'http://localhost:3000',
@@ -32,6 +35,19 @@ module.exports.handle = async event => {
             statusCode: 404,
             body: 'Not found'
         }
+
     }
+    }
+catch (e)
+{
+return {
+    headers: {
+        'Access-Control-Allow-Origin': 'http://localhost:3000',
+        'Access-Control-Allow-Credentials': 'true',
+      },
+    statusCode: 404,
+    body: JSON.stringify(e)
+}
+}
 }
 

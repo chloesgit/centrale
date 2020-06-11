@@ -6,7 +6,7 @@ import Api from '../../Services/dataService'
 import Form from 'react-bootstrap/Form'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
+import Exemple from "./exemple"
 
 export default class CreateFilm extends Component {
   constructor (props) {
@@ -42,22 +42,27 @@ export default class CreateFilm extends Component {
     
     return (
       <Form>
-  <Form.Group controlId="Namefilm" value={this.state.value} onChange={this.handleChange}>
+        <Form.Row>
+  <Form.Group as={Col} controlId="Namefilm" value={this.state.value} onChange={this.handleChange}>
     <Form.Label>Name  </Form.Label>
-    <Form.Control as="textarea" rows="1" />
-    
-    
+    <Form.Control   as="textarea" rows="1" width="5%"/>
   </Form.Group>
-
+  <Form.Group as={Col} controlId="date" value={this.state.value} onChange={this.handleChange}>
+    <Form.Label>release_date  </Form.Label>
+    <Form.Control as="textarea" rows="1" />
+    </Form.Group>
+  <Form.Group as={Col}>
+  <Exemple title="exemplee" /> 
+  </Form.Group>
+  </Form.Row>
   <Form.Group controlId="Description" value ={this.state.valueDes}  onChange={this.handleChange2}>
     <Form.Label>Description</Form.Label>
-    
-    <Form.Control as="textarea" rows="4" col="200"/>
-   
+  <Form.Control as="textarea" rows="4" col="200"/>
+   </Form.Group>
+   <Form.Group>
+    <Form.File id="picture" label="Image" />
   </Form.Group>
-  
- 
-  <Button variant="primary" type="submit" onClick={ this.handleSend}>>
+ <Button variant="primary" type="submit" onClick={ this.handleSend}>>
     Submit
   </Button>
 </Form>

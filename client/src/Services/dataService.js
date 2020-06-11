@@ -40,7 +40,12 @@ export default {
     var infos;
     axios.get(url).then((info) => {console.log(info); infos = info},(error) => {console.log(error + " ERROR");});
     return axios.get(url).then(info => info.data)
-  }
+  },
+
+  getMovieById2: (movieId ) => {
+    const url = serverBaseUrl+ "dev/items/"+String(movieId)
+    return axios.get(url).then(info => info.data)
+  },
 
 
 }

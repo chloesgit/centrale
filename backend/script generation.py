@@ -15,7 +15,7 @@ for i in range (0,10):
         dicoItem={}
         dicoItem["type"]={"S":"Movie"}
         dicoItem["uuid"]={"S":str(i).replace("'","")}
-        dicoItem["name"]={"S":str(Film['original_title']).replace("'","")}
+        dicoItem["title"]={"S":str(Film['original_title']).replace("'","")}
         dicoItem["release_date"]={"S":str(Film['release_date']).replace("'","")}
         dicoItem["vote_average"]={"S":str(Film['vote_average']).replace("'","")}
         dicoItem["overview"]={"S":str(Film['overview']).replace("'","").replace('"',"")}
@@ -34,8 +34,7 @@ for i in range (0,10):
 bd["cs-group-2-WassimM-dynamodb"]= élément
 print(str(bd).replace("'",'"'))
 
-with open('database3.json','w') as data:
-    print(json.dump(bd,data, indent=4))
+
 
 
 #with open('database2.json','w') as data:

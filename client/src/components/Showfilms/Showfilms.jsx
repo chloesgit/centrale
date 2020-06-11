@@ -54,7 +54,7 @@ export default class Showfilms extends Component {
                     date={film.release_date}
                     vote={film.vote_average}
                     image={film.poster_path}
-                    id={film.id}
+                    uuid={film.uuid}
                   />
                 </Col>
               )

@@ -21,11 +21,14 @@ export default {
     return axios.get(url).then(info => info.data)
   },
 
-  addFilm: (title , description)=> {
+  addFilm: (title , description, datec , genre)=> {
     const url = serverBaseUrl + "dev/items "
     axios.post(url, {
       name: title,
       descript : description ,
+      dateCreation: datec,
+      Genre : genre,
+
       withCredentials: true ,
       headers: { 'Access-Control-Allow-Origin': '*',}
     }).then((response) => {

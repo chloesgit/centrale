@@ -21,12 +21,12 @@ export default class Movie extends React.Component{
       genres: [],
       release_date: '',
       videoId: 0,
-      id : 0
+      uuid : ""
     }
   }
 
   componentDidMount () {
-    const idFilm = parseInt(this.props.match.params.id, 10)
+    const idFilm = this.props.match.params.id
     Api.getMovieById2(idFilm)
         .then(data => {
           console.log('dataApi', data)
@@ -38,7 +38,7 @@ export default class Movie extends React.Component{
             genres: data.genres,
             release_date: data.release_date,
             //videoId: data.videos.results['0'].key,
-            uuid: data.uuid 
+            uuid: String(data.uuid) 
           })
         })
   }

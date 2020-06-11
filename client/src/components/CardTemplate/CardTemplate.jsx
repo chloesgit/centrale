@@ -11,15 +11,16 @@ type Props = {
   id: number
 }
 
-const CardTamplate = ({ name, date, vote, image, id }: Props) => (
-  <Link to={`/movie/${id}`}>
+
+const CardTamplate = ({ name, date, vote, image, uuid }: Props) => (
+  <Link to={'/movie/'+String(uuid)}>
     <Card style={{ width: 240 }} bodyStyle={{ padding: 0 }}>
       <div className='custom-image'>
         <img alt={name} width='100%' src={`https://image.tmdb.org/t/p/w500${image}`} />
       </div>
       <div className='custom-card'>
         <h3>{name}</h3>
-        <p>{`Date: ${date}`}<br/>{` Note: ${vote}`}</p>
+        <p>{`Name: ${name} || Votes: ${vote}`}</p>
       </div>
     </Card>
   </Link>

@@ -74,79 +74,79 @@ const genresFilter = [{
 
 const dictGenres = [
   {
-    'id': 28,
+    'id': 'Action',
     'name': 'Action'
   },
   {
-    'id': 12,
+    'id': 'Adventure',
     'name': 'Adventure'
   },
   {
-    'id': 16,
+    'id': 'Animation',
     'name': 'Animation'
   },
   {
-    'id': 35,
+    'id': 'Comedy',
     'name': 'Comedy'
   },
   {
-    'id': 80,
+    'id': 'Crime',
     'name': 'Crime'
   },
   {
-    'id': 99,
+    'id': 'Documentary',
     'name': 'Documentary'
   },
   {
-    'id': 18,
+    'id': 'Drama',
     'name': 'Drama'
   },
   {
-    'id': 10751,
+    'id': 'Family',
     'name': 'Family'
   },
   {
-    'id': 14,
+    'id': 'Fantasy',
     'name': 'Fantasy'
   },
   {
-    'id': 36,
+    'id': 'History',
     'name': 'History'
   },
   {
-    'id': 27,
+    'id':'Horror',
     'name': 'Horror'
   },
   {
-    'id': 10402,
+    'id': 'Music',
     'name': 'Music'
   },
   {
-    'id': 9648,
+    'id': 'Mystery',
     'name': 'Mystery'
   },
   {
-    'id': 10749,
+    'id': 'Romance',
     'name': 'Romance'
   },
   {
-    'id': 878,
+    'id': 'Science Fiction',
     'name': 'Science Fiction'
   },
   {
-    'id': 10770,
+    'id': 'TV Movie',
     'name': 'TV Movie'
   },
   {
-    'id': 53,
+    'id':'Thriller',
     'name': 'Thriller'
   },
   {
-    'id': 10752,
+    'id': 'War',
     'name': 'War'
   },
   {
-    'id': 37,
+    'id': 'Western',
     'name': 'Western'
   }
 ]

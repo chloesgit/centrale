@@ -5,6 +5,7 @@ import { Row, Col } from 'antd'
 import uuidv4 from 'uuid/v4'
 import './Showfilms.css'
 
+
 export default class Showfilms extends Component {
   constructor (props) {
     super(props)
@@ -54,7 +55,7 @@ export default class Showfilms extends Component {
                     date={film.release_date}
                     vote={film.vote_average}
                     image={film.poster_path}
-                    id={film.id}
+                    uuid={film.uuid}
                   />
                 </Col>
               )

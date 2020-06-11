@@ -20,7 +20,7 @@ module.exports.handle = async event => {
 
     const dynamoDb = new DynamoDB.DocumentClient();
     const result1 = await dynamoDb.query(f("Movie")).promise();
-    const result2 = await dynamoDb.query(f("items")).promise();
+
 
 
     return {
@@ -29,7 +29,7 @@ module.exports.handle = async event => {
       'Access-Control-Allow-Credentials': 'true',
     },
         statusCode: 200,
-        body: JSON.stringify({page : 1 , results : {result1, result2}})+ "",
+        body: JSON.stringify({page : 1 , results : result1.Items}),
     }}
     catch (e) {
         return {

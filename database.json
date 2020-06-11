@@ -1,0 +1,75 @@
+{
+    "cs-group-2-chloes-dynamodb": [
+        {
+            "PutRequest": {
+                "Item": {
+                    "type": {
+                        "S": "Movie"
+                    },
+                    "uuid": {
+                        "S": "20"
+                    },
+                    "name": {
+                        "S": "My Life Without Me"
+                    },
+                    "date de sortie": {
+                        "S": "2003-03-07"
+                    },
+                    "note": {
+                        "S": "5.9"
+                    },
+                    "r\u00e9sum\u00e9": {
+                        "S": "A fatally ill mother with only two months to live creates a list of things she wants to do before she dies without telling her family of her illness."
+                    },
+                    "genres": {
+                        "SS": [
+                            "Drama",
+                            "Romance"
+                        ]
+                    },
+                    "adult": {
+                        "S": "False"
+                    },
+                    "poster_path": {
+                        "S": "/9Fa7tCEKIha1llGH7E41mxSpaF6.jpg"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "type": {
+                        "S": "Movie"
+                    },
+                    "uuid": {
+                        "S": "21"
+                    },
+                    "name": {
+                        "S": "The Endless Summer"
+                    },
+                    "date de sortie": {
+                        "S": "1966-06-15"
+                    },
+                    "note": {
+                        "S": "7.8"
+                    },
+                    "r\u00e9sum\u00e9": {
+                        "S": "Bruce Brown's The Endless Summer is one of the first and most influential surf movies of all time. The film documents American surfers Mike Hynson and Robert August as they travel the world during California\u2019s winter (which, back in 1965 was off-season for surfing) in search of the perfect wave and ultimately, an endless summer."
+                    },
+                    "genres": {
+                        "SS": [
+                            "Documentary"
+                        ]
+                    },
+                    "adult": {
+                        "S": "False"
+                    },
+                    "poster_path": {
+                        "S": "/5W5uaqQ7NZTwoDMKO4AtdcahHex.jpg"
+                    }
+                }
+            }
+        }
+    ]
+}

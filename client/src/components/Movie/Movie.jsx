@@ -20,13 +20,14 @@ export default class Movie extends React.Component{
       stars: 0,
       genres: [],
       release_date: '',
-      videoId: 0
+      videoId: 0,
+      uuid : ""
     }
   }
 
   componentDidMount () {
-    const idFilm = parseInt(this.props.match.params.id, 10)
-    Api.getMovieById(idFilm)
+    const idFilm = this.props.match.params.id
+    Api.getMovieById2(idFilm)
         .then(data => {
           console.log('dataApi', data)
           this.setState({
@@ -34,9 +35,10 @@ export default class Movie extends React.Component{
             name: data.title,
             stars: data.vote_average / 2,
             description: data.overview,
-            genres: (data.genres: Array<number>),
+            genres: data.genres,
             release_date: data.release_date,
-            videoId: data.videos.results['0'].key
+            //videoId: data.videos.results['0'].key,
+            uuid: String(data.uuid) 
           })
         })
   }
@@ -55,9 +57,11 @@ export default class Movie extends React.Component{
           <hr />
           <div className='genere'>
             <span className='genereTitle'>
-              <strong>Generes: </strong>
+              <strong>Genres: </strong>
             </span>
-            {this.state.genres.map(genere => <Tag color={Utils.randomColor()} key={genere.id}>{genere.name}</Tag>)}
+            
+
+            {this.state.genres.map(genere => <Tag  color={Utils.randomColor()} key={1}>{genere}</Tag>)}
           </div>
           <Rate className='rate' value={this.state.stars} />
           <hr />

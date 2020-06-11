@@ -1,0 +1,12 @@
+
+@font-face {
+    font-family: 'YellowRabbit';
+    src: url('Yellow Rabbit - Personal Use.otf') format('truetype')}
+header{
+    margin-top: 10%;
+    margin-bottom: 12%;
+    text-align: right;  background-image: url(./banner.jpg); background-size: 100% auto
+  }
+h1{ font-family: 'YellowRabbit';
+    font-size: 20em;; color: "white"}
+.form{border: 20px }

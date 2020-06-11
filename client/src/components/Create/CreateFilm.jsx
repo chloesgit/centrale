@@ -14,7 +14,8 @@ const ProperMulti: React.FC = (onChanges) => {
   Genre = JSON.stringify(value)
     return (
     <div>
-      <h1 className="genres">Genres</h1>
+
+      <div style={{color:"#036f7b"}}>Genres</div>
       
       <MultiSelect
       controlId = "stuff"
@@ -83,37 +84,41 @@ export default class CreateFilm extends Component {
   render () {
     
     return (
-      <Form>
-        <Form.Row>
-  <Form.Group as={Col} controlId="Namefilm" value={this.state.value} onChange={this.handleChange}>
-    <Form.Label>Name  </Form.Label>
-    <Form.Control   as="textarea" rows="1" width="5%"/>
-  </Form.Group>
+      <div>
+        <header>
+         <Col span={12} offset={6}>
+            <h1 style={{color:"white",fontSize:80}} className='title'> <br/>Ajout d'un film <br/><br/></h1>
+          </Col>
+        </header>
+        <Form style={{marginLeft:100}}>
+          <Form.Row>
+            <Form.Group style={{alignContent:"center"}} className = "form" controlId="formBasilEmail" value={this.state.value} onChange={this.handleChange}>
+            <Form.Label style={{color:"#036f7b ",textAlign:"center"}}> Nom du film  </Form.Label>
+            <Form.Control   placeholder="Nom du film"/>
+            </Form.Group>
+            <p>                           </p>
+            <Form.Group as={Col} style={{marginLeft:100}} controlId="date" value={this.state.value} onChange={this.handleChange3}>
+              <Form.Label style={{color:"#036f7b ",textAlign:"center"}}> Date de sortie </Form.Label>
+              <Form.Control type="date" rows="1" />
+            </Form.Group>
+            </Form.Row>
 
-  <Form.Group as={Col} controlId="date" value={this.state.value} onChange={this.handleChange3}>
-    <Form.Label>release_date  </Form.Label>
-    <Form.Control as="textarea" rows="1" />
-  </Form.Group>
-
-  <Form.Group as={Col} controlId="Genre"   >
-    <ProperMulti />  
-    </Form.Group  >
-  </Form.Row>
-
-
-  <Form.Group controlId="Description" value ={this.state.valueDes} onChange={this.handleChange2} >
-    <Form.Label>Description</Form.Label>
-    <Form.Control as="textarea" rows="4" col="200"/>
-  </Form.Group>
-
-  <Form.Group>
-    <Form.File id="picture" label="Image" />
-  </Form.Group>
-
- <Button variant="primary" type="submit" onClick={ this.handleSend}>>
-    Submit
-  </Button>
-</Form>
+            <Form.Group controlId="Genre"   >
+              <ProperMulti />  
+              </Form.Group  >
+            <Form.Group controlId="Description" value ={this.state.valueDes} onChange={this.handleChange2} >
+              <Form.Label style={{color:"#036f7b ",textAlign:"center",}}>Description</Form.Label>
+              <Form.Control as="textarea" rows="4" col="2000"/>
+            </Form.Group>
+            <Form.Group>
+              <Form.File style={{color:"#036f7b "}} id="picture" label="Image" />
+            </Form.Group>
+        
+  <Button style={{backgroundColor:"#036f7b",color:"white",fontFamily:"Arial"}}variant="primary" type="submit" onClick={ this.handleSend}>>
+      Créer
+    </Button>
+  </Form>
+        </div>
     )
   }
 }

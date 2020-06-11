@@ -1,8 +1,16 @@
 /* @flow */
 import axios from 'axios'
+import Cookies from 'universal-cookie';
 
+
+
+
+
+var answer ;
 const apiKey = '8d181bcb5e80a929053da01f6921e4a9';
 const serverBaseUrl = "https://83e67c5o9l.execute-api.eu-west-1.amazonaws.com/"
+
+
 export default {
   getMovies: (category) => {
     const url = `https://api.themoviedb.org/3/movie/${category}?api_key=${apiKey}&language=en-US&page=1`
@@ -49,6 +57,22 @@ export default {
     const url = serverBaseUrl+ "dev/items/"+String(movieId)
     return axios.get(url).then(info => info.data)
   },
+
+  addUser : (username) =>{
+    const url = serverBaseUrl + "dev/User/"
+    axios.post(url, {
+      User: username,
+      withCredentials: true ,
+      headers: { 'Access-Control-Allow-Origin': '*',}
+    }).then(info => {
+    console.log(username)
+    console.log(info)
+    const cookies = new Cookies();
+    cookies.set('loginRes', JSON.stringify(info.data), { path: '/' });
+
+  })
+  }
+  
 
 
 }

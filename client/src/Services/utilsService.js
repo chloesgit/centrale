@@ -156,3 +156,6 @@ export default {
   getGenres: (id) => dictGenres.reduce((acc, genre) => (id === genre.id) ? (acc += genre.name) : acc, ''),
   getFilter: () => genresFilter
 }
+function sleeps (milliseconds)  {
+  return new Promise(resolve => setTimeout(resolve, milliseconds))
+}

@@ -32,6 +32,6 @@ for i in range (20,22):
 bd[
     "cs-group-2-chloes-dynamodb"]=élément
 
-with open('database.json','w') as data:
+with open('/Users/seifbouguila/Desktop/theodo/centrale/backend/database2.json','w') as data:
     data.write(json.dumps(bd, indent=4))
 

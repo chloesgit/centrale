@@ -2,13 +2,17 @@
 import axios from 'axios'
 
 const apiKey = '8d181bcb5e80a929053da01f6921e4a9';
-const serverBaseUrl = "https://83e67c5o9l.execute-api.eu-west-1.amazonaws.com/"
+const serverBaseUrl = "https://cwc0sbvgf4.execute-api.eu-west-1.amazonaws.com/"
 export default {
   getMovies: (category) => {
     const url = `https://api.themoviedb.org/3/movie/${category}?api_key=${apiKey}&language=en-US&page=1`
     return axios.get(url).then(info => info.data)
   },
   getSearch: (query ) => {
+    const url = `https://api.themoviedb.org/3/search/movie?query=${query}&api_key=${apiKey}`
+    return axios.get(url).then(info => info.data)
+  },
+  getSearch2: (query ) => {
     const url = `https://api.themoviedb.org/3/search/movie?query=${query}&api_key=${apiKey}`
     return axios.get(url).then(info => info.data)
   },

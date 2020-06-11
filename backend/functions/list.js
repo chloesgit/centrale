@@ -1,28 +1,44 @@
 const DynamoDB = require('aws-sdk/clients/dynamodb');
 
 module.exports.handle = async event => {
+    try{
     if (!process.env.tableName) {
         throw new Error('env.tableName must be defined');
     }
-
-    const dynamoDb = new DynamoDB.DocumentClient();
-    const result = await dynamoDb.query({
+    function f(parame) {
+        return ({
         TableName: process.env.tableName,
         KeyConditionExpression: '#type = :type',
         ExpressionAttributeNames: {
             '#type': 'type'
         },
         ExpressionAttributeValues: {
-            ':type': 'items',
-        },
-    }).promise();
+            ':type': parame,
+        },}
+        )
+    }
+
+    const dynamoDb = new DynamoDB.DocumentClient();
+    const result1 = await dynamoDb.query(f("Movie")).promise();
+    const result2 = await dynamoDb.query(f("items")).promise();
+
 
     return {
-        headers: {
-            'Access-Control-Allow-Origin': 'http://localhost:3000',
-            'Access-Control-Allow-Credentials': 'true',
-          },
+            headers: {
+      'Access-Control-Allow-Origin': 'http://localhost:3000',
+      'Access-Control-Allow-Credentials': 'true',
+    },
         statusCode: 200,
-        body: JSON.stringify(result.Items),
+        body: JSON.stringify({page : 1 , results : {result1, result2}})+ "",
+    }}
+    catch (e) {
+        return {
+            statusCode: 200,
+            headers: {
+                'Access-Control-Allow-Origin': 'http://localhost:3000',
+                'Access-Control-Allow-Credentials': 'true',
+              },
+            body: JSON.stringify(e),
+        }
     }
 }

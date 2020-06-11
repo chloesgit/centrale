@@ -19,7 +19,7 @@ const CardTamplate = ({ name, date, vote, image, id }: Props) => (
       </div>
       <div className='custom-card'>
         <h3>{name}</h3>
-        <p>{`Date: ${date} || Votes: ${vote}`}</p>
+        <p>{`Name: ${name} || Votes: ${vote}`}</p>
       </div>
     </Card>
   </Link>

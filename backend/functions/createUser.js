@@ -1,3 +1,5 @@
+
+
 const DynamoDB = require('aws-sdk/clients/dynamodb');
 const uuid = require('uuid');
 
@@ -5,13 +7,13 @@ const uuid = require('uuid');
 module.exports.handle = async event => {
     const data = JSON.parse(event.body);
     
-
+    const newKey = uuid.v1()
     try{
         const dynamoDb = new DynamoDB.DocumentClient();
         const item = {
             type: 'User',
             name : data.User,
-            uuid: uuid.v1()
+            uuid: newKey
         }
 
         const result = await dynamoDb.query({
@@ -53,7 +55,7 @@ module.exports.handle = async event => {
                         'Access-Control-Allow-Origin': 'http://localhost:3000',
                         'Access-Control-Allow-Credentials': 'true',
                       },
-                      body: "Account created successfully"
+                      body: JSON.stringify(newKey)
                       //body: "Account created successfully",
                 }
         }
@@ -67,7 +69,7 @@ module.exports.handle = async event => {
                 'Access-Control-Allow-Origin': 'http://localhost:3000',
                 'Access-Control-Allow-Credentials': 'true',
               },
-            body: "nope",
+            body: "ERROR",
         }
     }
     

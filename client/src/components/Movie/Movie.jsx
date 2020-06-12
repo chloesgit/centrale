@@ -7,12 +7,12 @@ import Utils from '../../Services/utilsService'
 import Api from '../../Services/dataService'
 
 import './Movie.css'
-
-
+import Cookies from 'universal-cookie';
+const cookies = new Cookies();
 export default class Movie extends React.Component{
   constructor (props) {
     super(props)
-
+    this.handleChange = this.handleChange.bind(this);
     this.state = {
       name: '',
       description: '',
@@ -21,10 +21,12 @@ export default class Movie extends React.Component{
       genres: [],
       release_date: '',
       videoId: 0,
-      uuid : ""
+      uuid : "",
+       
     }
+    
   }
-
+  
   componentDidMount () {
     const idFilm = this.props.match.params.id
     Api.getMovieById2(idFilm)
@@ -42,8 +44,18 @@ export default class Movie extends React.Component{
           })
         })
   }
+  handleChange(event) {
+
+    console.log(JSON.stringify(event));
+    console.log(cookies.get("LoggedIn"))
+
+
+
+    
+  }
 
   render () {
+    
     return (
       <Row>
         <Col span={12} offset={1}>
@@ -60,7 +72,8 @@ export default class Movie extends React.Component{
 
             {this.state.genres.map(genere => <Tag  color={Utils.randomColor()} key={1}>{genere}</Tag>)}
           </div>
-          <Rate className='rate' value={this.state.stars} />
+          <Rate className='rate' disabled= {cookies.get("username") == "-"} value={this.state.stars} onChange= {this.handleChange} />
+
           <hr />
           <div className='trailer'>
             <strong> Trailer: </strong>

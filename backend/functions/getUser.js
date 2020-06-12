@@ -20,8 +20,9 @@ module.exports.handle = async event => {
             ).promise();
         var s = false
         var arrayLength = result.Items.length
+        var j = 0;
         for (var i = 0; i < arrayLength; i++) {
-             if(result.Items[i].name == data.User){ s= true; }}
+             if(result.Items[i].name == data.User){ s= true; j = i }}
             
         if (s) {
             return {
@@ -30,7 +31,7 @@ module.exports.handle = async event => {
                     'Access-Control-Allow-Credentials': 'true',
                   },
                 statusCode: 200,
-                  body: "Authentified",
+                  body: JSON.stringify(result.Items[j].uuid),
             }
         }
         else{
@@ -40,7 +41,7 @@ module.exports.handle = async event => {
                     'Access-Control-Allow-Credentials': 'true',
                   },
                 statusCode: 200,
-                  body: "Not Authentified ",
+                  body: "Not Authentified",
             }
 
         }
@@ -53,7 +54,7 @@ module.exports.handle = async event => {
                 'Access-Control-Allow-Origin': 'http://localhost:3000',
                 'Access-Control-Allow-Credentials': 'true',
               },
-            body: JSON.stringify(data),
+            body: "ERROR",
         }
     }
     

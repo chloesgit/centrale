@@ -55,13 +55,19 @@ export default class SignUp extends Component  {
         {
             
             this.updateContent("Username already exists")
-            
+            cookies.set('loginRes', '-',{ path: '/' })
+            cookies.set('username', '-',{ path: '/' })
         }
-        else if (result == "Account created successfully")
+        else if (result == "ERROR")
+        {
+          cookies.set('loginRes', '-',{ path: '/' })
+          cookies.set('username', '-',{ path: '/' })
+        }
+        else
         {
             this.updateContent("Success. Redirecting")
-    
-            result = cookies.set('username', this.state.value);
+            result = cookies.set('LoggedIn', true,{ path: '/' });
+            result = cookies.set('username', this.state.value,{ path: '/' });
             window.location.replace("/");
             setTimeout(() => {
                 this.setState({ redirect: "/" });

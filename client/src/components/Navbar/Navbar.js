@@ -21,6 +21,7 @@ import CreateFilm from '../Create/CreateFilm'
 
 
 export default function Navibar () {
+  
   const cookiesusername = new Cookies();
   var a = cookiesusername.get('username')
 

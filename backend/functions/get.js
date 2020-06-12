@@ -3,6 +3,7 @@ const DynamoDB = require('aws-sdk/clients/dynamodb');
 module.exports.handle = async event => {
     try
     {
+        const data = JSON.parse(event.body);
     if (!process.env.tableName) {
         throw new Error('env.tableName must be defined');
     }
@@ -13,7 +14,7 @@ module.exports.handle = async event => {
         Key: {
             
             type: 'Movie',
-            name: data.User,
+            uuid: event.pathParameters.id,
         },
     }).promise();
 

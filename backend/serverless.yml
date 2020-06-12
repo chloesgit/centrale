@@ -76,6 +76,15 @@ functions:
           cors:
             origin: http://localhost:3000
             allowCredentials: true
+  getUser:
+    handler: functions/getUser.handle
+    events:
+      - http:
+          method: post
+          path: User/getUser
+          cors:
+            origin: http://localhost:3000
+            allowCredentials: true
 custom:
   stageVars: ${file(./stage.${self:provider.stage}.yml)}
 

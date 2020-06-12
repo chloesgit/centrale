@@ -52,19 +52,19 @@ export default function Navibar () {
           <PlusOutlined style={{ position: "relative", bottom: "3px"}} /> Create
         </Link>
       </Menu.Item>
-      <Menu.Item disabled = {JSON.stringify(!bo)}  >
+      <Menu.Item disabled = {!bo}  >
 
         <Link to='/login'>
           <LoginOutlined  style={{ position: "relative", bottom: "3px"}} /> login
         </Link>
       </Menu.Item>
-      <Menu.Item disabled = {JSON.stringify(!bo)}>
+      <Menu.Item disabled = {!bo}>
       <Link to='/Signup' >
           <UsergroupAddOutlined   style={{ position: "relative", bottom: "3px"}} /> Singup
         </Link>
         </Menu.Item>
  
-      <Menu.Item disabled = {false}>
+      <Menu.Item disabled = {bo}>
         {console.log(JSON.stringify(bo))}
         {console.log(JSON.stringify(!bo))}
       

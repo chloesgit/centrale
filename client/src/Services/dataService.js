@@ -70,9 +70,23 @@ export default {
     const cookies = new Cookies();
     cookies.set('loginRes', JSON.stringify(info.data), { path: '/' });
 
+  },)
+  },
+  getUser : (username) =>{
+    const url = serverBaseUrl + "dev/User/getUser"
+    axios.post(url, {
+      User: username,
+      withCredentials: true ,
+      headers: { 'Access-Control-Allow-Origin': '*',}
+    }).then(info => {
+    console.log(username)
+    console.log(info)
+    const cookies = new Cookies();
+    cookies.set('LoggedIn', JSON.stringify(info.data), { path: '/' });
+
   })
-  }
-  
+}
+ 
 
 
 }

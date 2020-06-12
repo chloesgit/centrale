@@ -30,7 +30,7 @@ export default class SignUp extends Component  {
         valueGenre : [],
         reponse : "",
         redirect : null,
-        message: "Default Content",
+        message: "",
         fireRedirect: false
       }
 
@@ -110,13 +110,12 @@ export default class SignUp extends Component  {
             <div> -</div>
             <Form.Control   as="textarea" rows="1" Columns="1" width="15%"/>
             <div>- </div>
-        <Button variant="primary" type="submit" onClick={ this.handleSend}>>
+        <Button variant="primary" type="submit" onClick={ this.handleSend}>
             Sign Up
             </Button> 
             <div> { this.state.message }</div>
 
-            <Form.Control onChange={this.handleChangeReponse}  disabled = "true" value={this.state.reponse} as="textarea" rows="1" Columns="1" width="15%"/>
-        </Form.Group>
+             </Form.Group>
     </Form.Row>
 </Form>
   

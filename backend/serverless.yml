@@ -85,6 +85,24 @@ functions:
           cors:
             origin: http://localhost:3000
             allowCredentials: true
+  createNote:
+    handler: functions/createNote.handle
+    events:
+      - http:
+          method: post
+          path: Note/SendNote
+          cors:
+            origin: http://localhost:3000
+            allowCredentials: true
+  listNotes:
+    handler: functions/listNotes.handle
+    events:
+      - http:
+          method: get
+          path: Note
+          cors:
+            origin: http://localhost:3000
+            allowCredentials: true
 custom:
   stageVars: ${file(./stage.${self:provider.stage}.yml)}
 

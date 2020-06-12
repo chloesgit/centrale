@@ -83,8 +83,24 @@ export default {
     console.log(info)
     const cookies = new Cookies();
     cookies.set('LoggedIn', JSON.stringify(info.data), { path: '/' });
-
+    cookies.set('loginRes', JSON.stringify(info.data), { path: '/' });
   })
+  },
+  sendNote : (username, note, film) =>{
+    const url = serverBaseUrl + "dev/Note/SendNote"
+    axios.post(url, {
+      User: username,
+      Note : note,
+      Film : film,
+      withCredentials: true ,
+      headers: { 'Access-Control-Allow-Origin': '*',}
+    }).then(info => {
+      console.log(username)
+      console.log(note)
+      console.log(film)
+      const cookies = new Cookies();
+      cookies.set('ResultRequete', JSON.stringify(info.data), { path: '/' });
+    })
 }
  
 

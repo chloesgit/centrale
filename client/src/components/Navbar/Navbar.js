@@ -3,11 +3,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import 'antd/dist/antd.css'
 import  {Menu}  from 'antd'
-<<<<<<< HEAD
-import {HomeOutlined, SearchOutlined, StarOutlined, PlusOutlined, BgColorsOutlined } from '@ant-design/icons'
-=======
+
 import {HomeOutlined, SearchOutlined, StarOutlined, PlusOutlined, LoginOutlined,LogoutOutlined ,UsergroupAddOutlined  } from '@ant-design/icons'
->>>>>>> 1508c8eca424e354d5bc7c5ca9fe9ca79a55c64d
 
 import Cookies from 'universal-cookie';
 

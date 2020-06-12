@@ -1,0 +1,12 @@
+
+   {"cs-group-2-wassimFinal-dynamodb": 
+		[{"PutRequest": 
+			{"Item": 
+				{"type": {"S": "User"},
+				 "name" : {"S": "firstUser"},
+				"uuid" : {"S": "randomHash52548434"}}
+				
+			}
+		}
+		]
+	} 

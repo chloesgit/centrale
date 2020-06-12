@@ -5,6 +5,7 @@
     "aws-sdk": "^2.692.0",
     "axios": "^0.19.2",
     "bootstrap": "^4.5.0",
+    "react-alert": "^7.0.1",
     "react-bootstrap": "^1.0.1",
     "react-bootstrap-date-picker": "^5.1.0",
     "react-datepicker": "^3.0.0",

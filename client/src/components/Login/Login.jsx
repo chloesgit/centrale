@@ -114,13 +114,15 @@ export default class SignUp extends Component  {
       return (
 <Form>
             
-            <Form.Row>
+            <Form.Row style={{marginLeft:100}}>
                 <Form.Group as={Col} controlId="Username" value={this.state.value} onChange={this.handleChange}>
-                    <Form.Label> --User Name  </Form.Label>
-                    <div> -</div>
-                    <Form.Control   as="textarea" rows="1" Columns="1" width="15%"/>
-                    <div>- </div>
-                <Button variant="primary" type="submit" onClick={ this.handleSend}>
+                <br/>
+                    <Form.Label> User Name  </Form.Label>
+                    <div> </div>
+                    <Form.Control  width="15%"/>
+                    <div> </div>
+                    <br/>
+                <Button style={{backgroundColor:"#036f7b",color:"white"}}variant="primary" type="submit" onClick={ this.handleSend}>
                     Login
                     </Button> 
                     <div> { this.state.message }</div>
@@ -133,4 +135,4 @@ export default class SignUp extends Component  {
       )
     }
   }
-  
+

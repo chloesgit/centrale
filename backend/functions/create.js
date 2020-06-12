@@ -17,6 +17,7 @@ module.exports.handle = async event => {
         adult : "False",
         genres: data.Genre,
         note : 0
+
     }
 
     await dynamoDb.put({

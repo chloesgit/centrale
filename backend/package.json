@@ -7,6 +7,8 @@
     "axios": "^0.19.2",
     "json": "^9.0.6",
     "json-dynamo-putrequest": "^1.0.0",
+    "react-bootstrap-sweetalert": "^5.1.11",
+    "reactjs-popup": "^1.5.0",
     "uuid": "^8.1.0"
   },
   "devDependencies": {

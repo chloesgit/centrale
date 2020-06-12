@@ -7,13 +7,17 @@
     "antd": "^4.3.3",
     "axios": "^0.19.2",
     "react": "^16.13.1",
+    "react-alert": "^7.0.1",
+    "react-bootstrap-sweetalert": "^5.1.11",
+    "react-cookies": "^0.1.1",
     "react-dom": "^16.13.1",
     "react-multi-select-component": "^2.0.9",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.1",
     "react-youtube": "^7.11.2",
     "styled-components": "^5.1.0",
-    "superagent": "^5.2.2"
+    "superagent": "^5.2.2",
+    "universal-cookie": "^4.0.3"
   },
   "scripts": {
     "start": "react-scripts start",

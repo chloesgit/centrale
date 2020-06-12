@@ -5,7 +5,9 @@
     "aws-sdk": "^2.692.0",
     "axios": "^0.19.2",
     "bootstrap": "^4.5.0",
+    "react-alert": "^7.0.1",
     "react-bootstrap": "^1.0.1",
+    "react-bootstrap-sweetalert": "^5.1.11",
     "react-cookie": "^4.0.3",
     "react-multi-select-component": "^2.0.9",
     "react-youtube": "^7.11.2"

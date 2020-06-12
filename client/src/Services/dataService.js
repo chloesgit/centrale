@@ -86,12 +86,12 @@ export default {
     cookies.set('loginRes', JSON.stringify(info.data), { path: '/' });
   })
   },
-  sendNote : (username, note, film) =>{
+  sendNote : (username, note, filmuuid) =>{
     const url = serverBaseUrl + "dev/Note/SendNote"
     axios.post(url, {
       User: username,
       Note : note,
-      Film : film,
+      Film : filmuuid,
       withCredentials: true ,
       headers: { 'Access-Control-Allow-Origin': '*',}
     }).then(info => {

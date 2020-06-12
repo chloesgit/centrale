@@ -85,7 +85,7 @@ export default function Navibar () {
     <Route exact path='/upcoming' render={
       props => (<Showfilms currentPage='Up Coming' category='upcoming' {...props} />)} />
     <Route exact path='/toprated' render={
-      props => (<Showfilms currentPage='Top Rated' category='top_rated' {...props} />)} />
+      props => (<Showfilms currentPage='Top Rated' category='Recommended' {...props} />)} />
     <Route exact path='/search/:query' render={
       props => (<Showfilms currentPage='Search Results' {...props} />)} />
     <Route exact path='/movie/:id' component={Movie} />

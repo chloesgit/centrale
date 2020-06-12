@@ -130,6 +130,15 @@ functions:
           cors:
             origin: http://localhost:3000
             allowCredentials: true
+  searchMovie:
+    handler: functions/SearchMovie.handle
+    events:
+      - http:
+          method: get
+          path: search/{title}
+          cors:
+            origin: http://localhost:3000
+            allowCredentials: true
 custom:
   stageVars: ${file(./stage.${self:provider.stage}.yml)}
 

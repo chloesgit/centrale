@@ -111,7 +111,14 @@ export default {
       axios.get(url).then((info) => {console.log(info); infos = info},(error) => {console.log(error + " ERROR");});
       
       return axios.get(url).then(info => info.data)
-    }
+    },
+    searchMovie : (title) => {
+      const url = serverBaseUrl + "dev/search/"+ title
+      var infos;
+      axios.get(url).then((info) => {console.log(info); infos = info},(error) => {console.log(error + " ERROR");});
+      return axios.get(url).then(info => info.data)
+    },
+  
 
 }
  

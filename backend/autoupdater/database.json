@@ -1,0 +1,79 @@
+{
+    "cs-group-2-wassimFinal-dynamodb": [
+        {
+            "PutRequest": {
+                "Item": {
+                    "type": {
+                        "S": "rec"
+                    },
+                    "name": {
+                        "S": "wassim"
+                    },
+                    "uuid": {
+                        "S": "wassim"
+                    },
+                    "genres": {
+                        "SS": [
+                            "5",
+                            "ed6b9660-abdb-11ea-b8da-c3b76e486456",
+                            "7c241e60-abdf-11ea-a140-678ac2518853",
+                            "3",
+                            "88877b30-abfc-11ea-8b1d-219f32d1778b",
+                            "2"
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "type": {
+                        "S": "rec"
+                    },
+                    "name": {
+                        "S": "wass3"
+                    },
+                    "uuid": {
+                        "S": "wass3"
+                    },
+                    "genres": {
+                        "SS": [
+                            "888ea720-abfc-11ea-8b1d-219f32d1778b",
+                            "7c241e60-abdf-11ea-a140-678ac2518853",
+                            "",
+                            "8",
+                            "62171cc0-abdf-11ea-a140-678ac2518853",
+                            "5"
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "type": {
+                        "S": "rec"
+                    },
+                    "name": {
+                        "S": "compteWassim2"
+                    },
+                    "uuid": {
+                        "S": "compteWassim2"
+                    },
+                    "genres": {
+                        "SS": [
+                            "7c241e60-abdf-11ea-a140-678ac2518853",
+                            "3",
+                            "88877b30-abfc-11ea-8b1d-219f32d1778b",
+                            "8",
+                            "888ea720-abfc-11ea-8b1d-219f32d1778b",
+                            "62171cc0-abdf-11ea-a140-678ac2518853"
+                        ]
+                    }
+                }
+            }
+        }
+    ]
+}

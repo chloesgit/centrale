@@ -42,6 +42,9 @@ dicIDNames = { UNames[i]: i for i in range(len(UNames))}
 dicIDFilms = { UFilms[i]: i for i in range(len(UFilms))}
 d1 = [[ dicIDNames[x['name']], dicIDFilms[x['Film']], x['Note']/2 ] for x in data  ]
 
+
+
+
 with open('innovators.csv', 'w', newline='') as file:
     writer = csv.writer(file, delimiter=',')
     writer.writerows(d1)
@@ -98,7 +101,9 @@ user_prediction = predict(train_data_matrix, user_similarity, type='user')
 
 
 
-
+def min(a,b):
+    if (a<b) :return a
+    return b
 
 
 
@@ -200,42 +205,21 @@ M=train_data_matrix
 S=similarite(M)
 print(S)
 print(predictions(M,S))
-
-
-user_prediction = predictions(M,S)
-
+##user_prediction = predictions(M,S)
 res = [[UNames[i],UFilms[j], user_prediction[i,j]] for i in range(user_prediction.shape[0]) for j in  range(user_prediction.shape[1])]
 maxF = user_prediction.shape[1]
-
-
-
-
-def min(a,b):
-    if (a<b) :return a
-    return b
 res2 = { x : sorted([(y[1],y[2]) for y in res if y[0] == x],key= lambda x:x[1],  reverse=True )[:min(maxF,6)] for x in UNames}
 res3 = {x :  [res2[x][i][0] for i in range(len(res2[x]))]  for x in UNames }
-
-
-
-
-
-
-
-
 element = []
 bd = {}
 i=0
-
 for x  in res3:
-    
     try: 
         dicoPut={}
         dicoItem={}
         dicoItem['type']={"S":"rec"}
         dicoItem['name']={"S":x }
         dicoItem['uuid']={"S":x}
-
         dicoItem['genres']={"SS": res3[x]}
         dicoPut["PutRequest"]={"Item":dicoItem}
         element.append(dicoPut)
@@ -243,11 +227,7 @@ for x  in res3:
     except : 
         continue
 bd["cs-group-2-wassimFinal-dynamodb"]=element
-
 print(bd)
 with open('database.json','w') as data:
     data.write(json.dumps(bd, indent=4))
-
-
-
 os.system("aws dynamodb batch-write-item --request-items file://database.json")

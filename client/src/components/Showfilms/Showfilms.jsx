@@ -17,20 +17,20 @@ export default class Showfilms extends Component {
 
   handleApiCall (props) {
     if (props.match.params.query) {
-      Api.getSearch(props.match.params.query)
-          .then(data => {
-            this.setState({
-              results: data.results
-            })
-          })
+     // Api.getSearch(props.match.params.query) .then(data => {this.setState({results: data.results})})
+     // Api.searchMovie(props.match.params.query).then(data => {this.setState({results: data.results})})
+     // Api.getFilmList(props.category).then(data => {this.setState({results: data.results})})
+      //Api.getFilmList(props.category).then(data => { console.log(data)})
+
     } else {
       if(props.category == "Recommended")
       {
         Api.getRec(cookies.get("username")).then(data => {this.setState({results: data.results})})
+        
       }
       else{
       //Api.getMovies(props.category) .then(data => { console.log(data)})
-      Api.getFilmList(props.category).then(data => { console.log(data)})
+     // Api.getFilmList(props.category).then(data => { console.log(data)})
       Api.getFilmList(props.category).then(data => {this.setState({results: data.results})})
      
     // Api.getRec(cookies.get("username")).then(data => { console.log(data)})

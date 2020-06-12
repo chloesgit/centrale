@@ -11,6 +11,7 @@ provider:
         - dynamodb:Query
         - dynamodb:GetItem
         - dynamodb:PutItem
+        - dynamodb:DeleteItem
       Resource:
         - 'Fn::GetAtt': [Table, Arn]
         - "*"

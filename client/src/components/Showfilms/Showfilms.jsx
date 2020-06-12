@@ -5,6 +5,7 @@ import { Row, Col } from 'antd'
 import { v4 as uuidv4 } from 'uuid';
 import './Showfilms.css'
 
+
 export default class Showfilms extends Component {
   constructor (props) {
     super(props)
@@ -22,12 +23,9 @@ export default class Showfilms extends Component {
             })
           })
     } else {
-      Api.getMovies2(props.category)
-          .then(data => {
-            this.setState({
-              results: data.results
-            })
-          })
+
+      Api.getMovies(props.category) .then(data => { console.log(data)})
+      Api.getFilmList(props.category).then(data => {this.setState({results: data.results})})
     }
   }
 
@@ -42,11 +40,13 @@ export default class Showfilms extends Component {
   render () {
     return (
       <div>
-        <Row>
-          <Col span={12} offset={6}>
-            <h1 className='title'>{ this.props.currentPage } </h1>
-          </Col>
-        </Row>
+        <header>
+          <Row>
+            <Col span={12} offset={6}>
+              <h1 style={{color:"white",fontSize:80}} className='title'> <br/>{ this.props.currentPage } <br/><br/></h1>
+            </Col>
+          </Row>
+          </header>
         <Row gutter={24}>
           {
             this.state.results.map(film => {
@@ -57,7 +57,7 @@ export default class Showfilms extends Component {
                     date={film.release_date}
                     vote={film.vote_average}
                     image={film.poster_path}
-                    id={film.id}
+                    uuid={film.uuid}
                   />
                 </Col>
               )

@@ -14,11 +14,12 @@ for i in range (0,10):
         dicoPut={}
         dicoItem={}
         dicoItem["type"]={"S":"Movie"}
-        dicoItem["uuid"]={"S":str(i).replace("'","")}
-        dicoItem["title"]={"S":str(Film['original_title']).replace("'","")}
-        dicoItem["release_date"]={"S":str(Film['release_date']).replace("'","")}
-        dicoItem["vote_average"]={"S":str(Film['vote_average']).replace("'","")}
-        dicoItem["overview"]={"S":str(Film['overview']).replace("'","").replace('"',"")}
+        dicoItem["uuid"]={"S":str(i)}
+        dicoItem["title"]={"S":str(Film['original_title'])}
+        dicoItem["release_date"]={"S":str(Film['release_date'])}
+        dicoItem["vote_average"]={"S":str(Film['vote_average'])}
+        dicoItem["overview"]={"S":str(Film['overview'])}
+        dicoItem["poster_path"]={"S":str(Film['poster_path'])}
         L=Film["genres"]
         genre = []
         for i in range(len(L)):
@@ -31,11 +32,12 @@ for i in range (0,10):
     except : 
         continue
 
-bd["cs-group-2-WassimM-dynamodb"]= élément
-print(str(bd).replace("'",'"'))
+bd["cs-group-2-seifeddine-dynamodb"]= élément
 
 
 
 
-#with open('database2.json','w') as data:
-#    data.write(json.dump(str(bd).replace("'",'"'), data,indent=4))
+
+with open('/Users/seifbouguila/Desktop/theodo/centrale/backend/database2.json','w') as data:
+   
+    data.write(json.dumps(bd, indent=4))

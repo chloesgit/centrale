@@ -5,6 +5,10 @@ import './SearchForm.css'
 import Button from 'react-bootstrap/Button'
 import Api from '../../Services/dataService'
 import  {FileSearchOutlined } from   '@ant-design/icons'
+<<<<<<< HEAD
+=======
+
+>>>>>>> seif5
 export default class SearchForm extends Component {
   constructor (props) {
     super(props)
@@ -32,7 +36,7 @@ export default class SearchForm extends Component {
         <Col span={14} offset={5}>
           <form onSubmit={this.handleSubmit}>
             <Input className='input' style={{borderColor: "#90b5bb" }}placeholder='Rechercher un film' onChange={this.handleChange} />
-            <Button style={{backgroundColor:"#036f7b",color:"white"}}variant="Search" onClick={this.handleSubmit}>Search</Button>{' '}
+            <Button style={{backgroundColor:"#036f7b",color:"white"}}variant="Search" onClick={this.handleSubmit}><FileSearchOutlined/>Search</Button>{' '}
           </form>
         </Col>
         {

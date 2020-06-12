@@ -17,7 +17,7 @@ export default {
     return axios.get(url).then(info => info.data)
   },
   getSearch2: (query ) => {
-    const url = `https://cwc0sbvgf4.execute-api.eu-west-1.amazonaws.com/dev/items`
+    const url = `https://api.themoviedb.org/3/search/movie?query=${query}&api_key=${apiKey}`
     return axios.get(url).then(info => info.data)
   },
   getMovieById: (movieId ) => {

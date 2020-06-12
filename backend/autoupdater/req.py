@@ -11,7 +11,7 @@ from sklearn import model_selection
 from sklearn.metrics.pairwise import pairwise_distances
 
 # api-endpoint 
-URL = "https://83e67c5o9l.execute-api.eu-west-1.amazonaws.com/dev/Note"
+URL = "https://cwc0sbvgf4.execute-api.eu-west-1.amazonaws.com/"
   
 # location given here 
 

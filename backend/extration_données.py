@@ -6,7 +6,7 @@ bd = {}
 
 
 
-for i in range (20,2020):
+for i in range (20,70):
     try: 
         Film=tmdb.Movies(i).info()
         dicoPut={}
@@ -29,7 +29,7 @@ for i in range (20,2020):
     except : 
         continue
 bd[
-    "cs-group-2-chloes-dynamodb"]=élément
+    "cs-group-2-wassimFinal-dynamodb"]=élément
 
 with open('database.json','w') as data:
     data.write(json.dumps(bd, indent=4))

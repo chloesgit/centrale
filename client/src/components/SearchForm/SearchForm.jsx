@@ -4,11 +4,8 @@ import { Redirect } from 'react-router-dom'
 import './SearchForm.css'
 import Button from 'react-bootstrap/Button'
 import Api from '../../Services/dataService'
-import  {FileSearchOutlined } from   '@ant-design/icons'
-<<<<<<< HEAD
-=======
+import  {FileSearchOutlined } from '@ant-design/icons'
 
->>>>>>> seif5
 export default class SearchForm extends Component {
   constructor (props) {
     super(props)

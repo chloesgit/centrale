@@ -48,10 +48,19 @@ export default class Movie extends React.Component{
 
     console.log(JSON.stringify(event));
     console.log(cookies.get("LoggedIn"))
-
-
-
-    
+    Api.sendNote(cookies.get("username"),event*2, this.state.name)
+    setTimeout(() => {
+      var result = cookies.get('ResultRequete');
+      console.log(result)
+      if(result == "vote success")
+      {
+        console.log("successfuly voted")
+      }
+      else
+      {
+        console.log("already voted on this movie")
+      }
+    }, 1000);
   }
 
   render () {

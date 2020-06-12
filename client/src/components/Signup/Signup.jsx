@@ -53,7 +53,6 @@ export default class SignUp extends Component  {
         console.log(result)
         if(result == "Username already exists")
         {
-            
             this.updateContent("Username already exists")
             cookies.set('loginRes', '-',{ path: '/' })
             cookies.set('username', '-',{ path: '/' })

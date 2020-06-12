@@ -48,7 +48,7 @@ export default class Movie extends React.Component{
 
     console.log(JSON.stringify(event));
     console.log(cookies.get("LoggedIn"))
-    Api.sendNote(cookies.get("username"),event*2, this.state.name)
+    Api.sendNote(cookies.get("username"),event*2, this.state.uuid)
     setTimeout(() => {
       var result = cookies.get('ResultRequete');
       console.log(result)

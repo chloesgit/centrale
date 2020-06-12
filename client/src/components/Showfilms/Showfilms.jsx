@@ -4,8 +4,9 @@ import Api from '../../Services/dataService.js'
 import { Row, Col } from 'antd'
 import uuidv4 from 'uuid/v4'
 import './Showfilms.css'
+import Cookies from 'universal-cookie';
 
-
+const cookies = new Cookies();
 export default class Showfilms extends Component {
   constructor (props) {
     super(props)
@@ -23,10 +24,18 @@ export default class Showfilms extends Component {
             })
           })
     } else {
-
-      Api.getMovies(props.category) .then(data => { console.log(data)})
+      if(props.category == "Recommended")
+      {
+        Api.getRec(cookies.get("username")).then(data => {this.setState({results: data.results})})
+      }
+      else{
+      //Api.getMovies(props.category) .then(data => { console.log(data)})
+      Api.getFilmList(props.category).then(data => { console.log(data)})
       Api.getFilmList(props.category).then(data => {this.setState({results: data.results})})
+     
+    // Api.getRec(cookies.get("username")).then(data => { console.log(data)})
     }
+  }
   }
 
   componentWillReceiveProps (nextProps) {

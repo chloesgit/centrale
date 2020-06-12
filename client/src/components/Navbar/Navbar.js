@@ -44,7 +44,7 @@ export default function Navibar () {
         </Link>
       </Menu.Item>
       <Menu.Item>
-        <Link to='toprated'>
+        <Link to='Recommended'>
           <StarOutlined style={{ position: "relative", bottom: "3px"}}/> Top Rated
         </Link>
       </Menu.Item>
@@ -84,8 +84,8 @@ export default function Navibar () {
       props => (<Showfilms currentPage='Popular' category='popular'{...props} />)} />
     <Route exact path='/upcoming' render={
       props => (<Showfilms currentPage='Up Coming' category='upcoming' {...props} />)} />
-    <Route exact path='/toprated' render={
-      props => (<Showfilms currentPage='Top Rated' category='Recommended' {...props} />)} />
+    <Route exact path='/Recommended' render={
+      props => (<Showfilms currentPage='Recommended' category='Recommended' {...props} />)} />
     <Route exact path='/search/:query' render={
       props => (<Showfilms currentPage='Search Results' {...props} />)} />
     <Route exact path='/movie/:id' component={Movie} />

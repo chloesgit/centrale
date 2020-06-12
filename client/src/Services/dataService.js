@@ -97,13 +97,25 @@ export default {
     }).then(info => {
       console.log(username)
       console.log(note)
-      console.log(film)
+      console.log(filmuuid)
       const cookies = new Cookies();
       cookies.set('ResultRequete', JSON.stringify(info.data), { path: '/' });
-    })
+    })},
+
+
+    getRec: (name) => {
+      var str = JSON.stringify(name);
+      const url = serverBaseUrl + "dev/rec/" + str.substring(1, str.length - 1);
+      console.log(url)
+      var infos;
+      axios.get(url).then((info) => {console.log(info); infos = info},(error) => {console.log(error + " ERROR");});
+      
+      return axios.get(url).then(info => info.data)
+    }
+
 }
  
 
 
-}
+
 

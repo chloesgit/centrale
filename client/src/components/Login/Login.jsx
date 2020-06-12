@@ -51,18 +51,27 @@ export default class SignUp extends Component  {
         const cookies = new Cookies();
         result = cookies.get('LoggedIn');
         console.log(result)
-        if(result != "Authentified")
+        if(result == "Not Authentified")
         {
             
             this.updateContent("Username doesn't exist ")
+            cookies.set('loginRes', '-',{ path: '/' })
+            cookies.set('username', '-',{ path: '/' })
             
         }
-        else if (result == "Authentified")
+        else if (result == "ERROR")
+        {
+          {
+            cookies.set('loginRes', '-',{ path: '/' })
+            cookies.set('username', '-',{ path: '/' })
+          }
+        }
+        else
         {
             this.updateContent("Success. Redirecting")
     
-            result = cookies.set('LoggedIn', "True");
-            result = cookies.set('username', this.state.value);
+            result = cookies.set('LoggedIn', true,{ path: '/' });
+            result = cookies.set('username', this.state.value,{ path: '/' });
             window.location.replace("/");
             setTimeout(() => {
                 this.setState({ redirect: "/" });

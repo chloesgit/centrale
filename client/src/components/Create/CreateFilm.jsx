@@ -101,7 +101,7 @@ export default class CreateFilm extends Component {
   </Form.Row>
 
 
-  <Form.Group controlId="Description" value ={this.state.valueDes} onChange={this.handleChange2} >
+  <Form.Group controlId="Description" value ={this.state.valueDes} onChange={this.handleChange2}>
     <Form.Label>Description</Form.Label>
     <Form.Control as="textarea" rows="4" col="200"/>
   </Form.Group>
@@ -110,7 +110,7 @@ export default class CreateFilm extends Component {
     <Form.File id="picture" label="Image" />
   </Form.Group>
 
- <Button variant="primary" type="submit" onClick={ this.handleSend}>>
+ <Button variant="primary" type="submit" onClick={ this.handleSend}>
     Submit
   </Button>
 </Form>

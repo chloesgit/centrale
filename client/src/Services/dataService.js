@@ -8,7 +8,7 @@ import Cookies from 'universal-cookie';
 
 var answer ;
 const apiKey = '8d181bcb5e80a929053da01f6921e4a9';
-const serverBaseUrl = "https://83e67c5o9l.execute-api.eu-west-1.amazonaws.com/"
+const serverBaseUrl = "https://cwc0sbvgf4.execute-api.eu-west-1.amazonaws.com/"
 
 
 export default {

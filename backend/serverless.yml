@@ -103,6 +103,33 @@ functions:
           cors:
             origin: http://localhost:3000
             allowCredentials: true
+  getRec:
+    handler: functions/getRec.handle
+    events:
+      - http:
+          method: get
+          path: rec/{id}
+          cors:
+            origin: http://localhost:3000
+            allowCredentials: true
+  listRec:
+    handler: functions/listRec.handle
+    events:
+      - http:
+          method: get
+          path: rec
+          cors:
+            origin: http://localhost:3000
+            allowCredentials: true
+  delete:
+    handler: functions/delete.handle
+    events:
+      - http:
+          method: get
+          path: del/note/{id}
+          cors:
+            origin: http://localhost:3000
+            allowCredentials: true
 custom:
   stageVars: ${file(./stage.${self:provider.stage}.yml)}
 

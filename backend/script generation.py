@@ -7,7 +7,7 @@ bd = {}
 
 
 
-for i in range (0,10):
+for i in range (50,80):
     try: 
         Film=tmdb.Movies(i).info()
         dicoBigger={}

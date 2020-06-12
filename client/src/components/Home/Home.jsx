@@ -5,7 +5,7 @@ import ListTable from '../Table/Table'
 const Home = () => (
   <div>
     <SearchForm />
-    <ListTable />
+  
   </div>
 )
 

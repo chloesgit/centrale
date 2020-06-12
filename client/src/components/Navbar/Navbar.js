@@ -45,7 +45,7 @@ export default function Navibar () {
       </Menu.Item>
       <Menu.Item>
         <Link to='toprated'style={{color:"white"}}>
-          <StarOutlined style={{ position: "relative", bottom: "3px"}}/> Top Rated
+          <StarOutlined style={{ position: "relative", bottom: "3px"}}/> Recommandations
         </Link>
       </Menu.Item>
       <Menu.Item>

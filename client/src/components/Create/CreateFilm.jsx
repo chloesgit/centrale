@@ -84,7 +84,6 @@ export default class CreateFilm extends Component {
   render () {
     
     return (
-<<<<<<< HEAD
       <div>
         <header>
          <Col span={12} offset={6}>
@@ -120,39 +119,6 @@ export default class CreateFilm extends Component {
     </Button>
   </Form>
         </div>
-=======
-      <Form>
-        <Form.Row>
-  <Form.Group as={Col} controlId="Namefilm" value={this.state.value} onChange={this.handleChange}>
-    <Form.Label>Name  </Form.Label>
-    <Form.Control   as="textarea" rows="1" width="5%"/>
-  </Form.Group>
-
-  <Form.Group as={Col} controlId="date" value={this.state.value} onChange={this.handleChange3}>
-    <Form.Label>release_date  </Form.Label>
-    <Form.Control as="textarea" rows="1" />
-  </Form.Group>
-
-  <Form.Group as={Col} controlId="Genre"   >
-    <ProperMulti />  
-    </Form.Group  >
-  </Form.Row>
-
-
-  <Form.Group controlId="Description" value ={this.state.valueDes} onChange={this.handleChange2}>
-    <Form.Label>Description</Form.Label>
-    <Form.Control as="textarea" rows="4" col="200"/>
-  </Form.Group>
-
-  <Form.Group>
-    <Form.File id="picture" label="Image" />
-  </Form.Group>
-
- <Button variant="primary" type="submit" onClick={ this.handleSend}>
-    Submit
-  </Button>
-</Form>
->>>>>>> 06d55986839649b28e9ace894181fad01826a105
     )
   }
 }
